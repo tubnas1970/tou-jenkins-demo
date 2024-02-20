@@ -1,4 +1,4 @@
-#!groovy
+@NonCPS
 
 def cleanUpStage(){  
     echo '========== hi there ========'
