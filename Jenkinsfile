@@ -11,6 +11,7 @@ pipeline {
       steps {
         checkout scm
         echo "building"
+        def util = load("filestep.groovy")
       }
     }
     stage('Test') {
@@ -21,7 +22,7 @@ pipeline {
     stage('Deploy') {
       steps {
         echo "deploying"
-        cleanUpStage()
+        util.cleanUpStage()
 
       }
     }
