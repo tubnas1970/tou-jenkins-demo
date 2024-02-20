@@ -4,9 +4,7 @@
 pipeline {
   //def gvyfile
   
-  agent {
-    any
-  }
+  agent any
   
   stages {
     stage('Build') {
