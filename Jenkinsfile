@@ -22,7 +22,7 @@ pipeline {
       steps {
         echo "deploying"
         script {
-          def util = load("filestep.groovy")
+          util = load("filestep.groovy")
           util.cleanUpStage()
         }
 
