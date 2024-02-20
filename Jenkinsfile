@@ -1,6 +1,9 @@
 #!/usr/bin/env groovy
 
+
 pipeline {
+  def gvyfile
+  
   agent any
   stages {
     stage('Build') {
