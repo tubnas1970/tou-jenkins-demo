@@ -11,7 +11,9 @@ pipeline {
       steps {
         checkout scm
         echo "building"
-        def util = load("filestep.groovy")
+        script {
+          def util = load("filestep.groovy")
+        }
       }
     }
     stage('Test') {
