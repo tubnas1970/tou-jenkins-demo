@@ -2,7 +2,7 @@
 
 
 pipeline {
-  def gvyfile
+  //def gvyfile
   
   agent {
     any
@@ -25,9 +25,9 @@ pipeline {
         echo "deploying"
 
         // Load the file 'filestep.groovy' from the current directory, into a variable called "externalMethod".
-         grvyfile = load("filestep.groovy")
-         // Call the method defined in the goovy file
-          grvyfile.cleanUpStage()
+        // grvyfile = load("filestep.groovy")
+        // Call the method defined in the goovy file
+        // grvyfile.cleanUpStage()
       }
     }
 
