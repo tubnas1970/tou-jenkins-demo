@@ -1,7 +1,5 @@
 #!groovy
 
 def cleanUpStage(){  
-    stage('Cleanup workspace'){
-      deleteDir()
-    }
+    echo '========== hi there ========'
 }
