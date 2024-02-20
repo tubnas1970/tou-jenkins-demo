@@ -4,10 +4,14 @@
 pipeline {
   def gvyfile
   
-  agent any
+  agent {
+    any
+  }
+  
   stages {
     stage('Build') {
       steps {
+        checkout scm
         echo "building"
       }
     }
