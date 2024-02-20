@@ -1,5 +1,4 @@
-#!/usr/bin/env groovy
-
+Map modules = [:]
 
 pipeline {
   //def gvyfile
@@ -22,8 +21,8 @@ pipeline {
       steps {
         echo "deploying"
         script {
-          util = load "filestep.groovy"
-          util.cleanUpStage()
+          modules.one = load "filestep.groovy"
+          modules.one.cleanUpStage()
         }
 
       }
