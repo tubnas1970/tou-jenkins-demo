@@ -24,7 +24,9 @@ pipeline {
     stage('Deploy') {
       steps {
         echo "deploying"
-        util.cleanUpStage()
+        script {
+          util.cleanUpStage()
+        }
 
       }
     }
