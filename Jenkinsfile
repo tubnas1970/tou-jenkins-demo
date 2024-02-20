@@ -18,9 +18,9 @@ pipeline {
         echo "deploying"
 
         // Load the file 'filestep.groovy' from the current directory, into a variable called "externalMethod".
-         def externalMethod = load("filestep.groovy")
+         grvyfile = load("filestep.groovy")
          // Call the method defined in the goovy file
-          externalMethod.cleanUpStage()
+          grvyfile.cleanUpStage()
       }
     }
 
