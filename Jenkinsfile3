@@ -1,0 +1,24 @@
+pipeline {
+  
+  agent any
+
+  triggers {
+            parameterizedCron(parameterizedCron(
+                env.JOB_NAME.contains("JenkinsLibExample3") ?
+                ''' * * * * % FIRSTNAME=bill;LASTNAME=smith
+                ''' : ''
+            )
+  }
+              
+  
+  stages {
+    stage('Build Stage') {
+      steps {
+        //checkout scm
+        echo "building"
+      }
+    }
+
+  } // stages
+
+} // pipeline
