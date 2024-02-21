@@ -14,7 +14,8 @@ pipeline {
         jobStatus = build job: "job1", wait: true
 
         script {
-        echo jobStatus.getResult()
+          echo jobStatus.getResult()
+        }
       }
     }
         
