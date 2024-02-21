@@ -1,7 +1,6 @@
-Map modules = [:]
+def grvy
 
 pipeline {
-  //def gvyfile
   
   agent any
   
@@ -21,8 +20,8 @@ pipeline {
       steps {
         echo "deploying"
         script {
-          modules.one = load "filestep.groovy"
-          modules.one.cleanUpStage()
+          grvy = load "filestep.groovy"
+          grvy.cleanUpStage()
         }
 
       }
