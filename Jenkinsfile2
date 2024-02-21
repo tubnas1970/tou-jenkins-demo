@@ -17,6 +17,15 @@ pipeline {
         }
       }
     }
+
+    post { 
+      success { 
+        echo 'Job result is success'
+      }
+      failure { 
+        echo 'Job result is failure'
+      }
+    }
         
 
   } // stages
