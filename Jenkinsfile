@@ -19,7 +19,7 @@ pipeline {
     stage('Deploy Stage') {
       steps {
         echo "deploying"
-        script {
+        script
           grvy = load "filestep.groovy"
           grvy.cleanUpStage()
         }
