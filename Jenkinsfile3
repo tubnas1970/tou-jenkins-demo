@@ -5,7 +5,7 @@ pipeline {
   triggers {
             parameterizedCron(
               env.JOB_NAME.contains("JenkinsLibExample3") ?
-                ''' * * * * % FIRSTNAME=bill;LASTNAME=smith
+                ''' * * * * * % FIRSTNAME=bill;LASTNAME=smith
                 ''' : ''
             )    
   }
