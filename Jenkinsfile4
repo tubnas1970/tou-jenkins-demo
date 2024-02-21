@@ -4,9 +4,11 @@ pipeline {
 
   triggers {
             parameterizedCron(
+              parameterizedSpecification(
                 ''' * * * * * % FIRSTNAME=bill;LASTNAME=smith
                     * * * * * % FIRSTNAME=jill;LASTNAME=smith
                 ''' : ''
+              )
             )    
 
   }
