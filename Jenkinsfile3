@@ -7,6 +7,9 @@ pipeline {
               env.JOB_NAME.contains("JenkinsLibExample3") ?
                 ''' * * * * * % FIRSTNAME=bill;LASTNAME=smith
                 ''' : ''
+              env.JOB_NAME.contains("JenkinsLibExample4") ?
+                ''' * * * * * % FIRSTNAME=jill;LASTNAME=smith
+                ''' : ''
             )    
   }
               
