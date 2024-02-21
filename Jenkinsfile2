@@ -16,7 +16,7 @@ pipeline {
 
           if (job1Status.getResult() == 'SUCCESS') {
             job2Status = build job: "job2", wait: true
-            echo "Job2Status = $job2Status.getResult()"
+            echo "Job2Status = ${job2Status.getResult()}"
           } else {
             echo "******* JOB2 FAILED *********"
           }      
