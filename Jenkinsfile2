@@ -12,8 +12,14 @@ pipeline {
     stage('Call Job') {
       steps {
         script {
-          jobStatus = build job: "job1", wait: true
-          echo jobStatus.getResult()
+          job1Status = build job: "job1", wait: true
+
+          if (job1Status.getResult() == 'SUCCESS') {
+            job2Status = build job: "job2", wait: true
+            echo "Job2Status = $job2Status.getResult()"
+          } else {
+            echo "******* JOB2 FAILED *********"
+          }      
         }
       }
     }
