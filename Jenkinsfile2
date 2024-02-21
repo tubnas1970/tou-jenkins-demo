@@ -1,0 +1,20 @@
+pipeline {
+  
+  agent any
+  
+  stages {
+    stage('Build Stage') {
+      steps {
+        checkout scm
+        echo "building"
+      }
+    }
+    stage('Call Job') {
+      steps {
+        build job: "job1", wait: true
+      }
+    }
+        
+
+  } // stages
+} // pipeline
