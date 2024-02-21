@@ -3,7 +3,8 @@ pipeline {
   agent any
 
   triggers {
-            parameterizedCron(env.JOB_NAME.contains("JenkinsLibExample3") ?
+            parameterizedCron(
+              env.JOB_NAME.contains("JenkinsLibExample3") ?
                 ''' * * * * % FIRSTNAME=bill;LASTNAME=smith
                 ''' : ''
             )    
