@@ -11,7 +11,10 @@ pipeline {
     }
     stage('Call Job') {
       steps {
-        build job: "job1", wait: true
+        jobStatus = build job: "job1", wait: true
+
+        script {
+        echo "jobStatus = " + jobStatus.getResult()
       }
     }
         
