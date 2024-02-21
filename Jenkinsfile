@@ -26,7 +26,9 @@ pipeline {
       }
     }
     stage('Closing Stage') {
-      grv.closingStep()
+      script {
+        grv.closingStep()
+      }
     }
     
 
