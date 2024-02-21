@@ -5,7 +5,7 @@ pipeline {
   agent any
   
   stages {
-    stage('Build') {
+    stage('Build Stage') {
       steps {
         checkout scm
         echo "building"
@@ -16,16 +16,19 @@ pipeline {
         echo "testing"
       }
     }
-    stage('Deploy') {
+    stage('Deploy Stage') {
       steps {
         echo "deploying"
         script {
           grvy = load "filestep.groovy"
           grvy.cleanUpStage()
         }
-
       }
     }
+    stage('Closing Stage') {
+      grv.closingStep()
+    }
+    
 
-  }
+  } 
 }
