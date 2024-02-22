@@ -38,10 +38,10 @@ pipeline {
         //    }
         //}
 
-        stage('parallel stage') {
+        stage('Dynamic stage') {
             steps {
                 script {
-                    parallel generateStage2()
+                    generateStage2()
                 }
             }
         }
