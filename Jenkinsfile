@@ -25,7 +25,14 @@ pipeline {
         }
       }
     }
-        
+
+    stage('parallel stage') {
+      steps {
+        script {
+          grvy.generateStage("mynode")
+        }
+      }
+    }    
 
   } // stages
 } // pipeline
