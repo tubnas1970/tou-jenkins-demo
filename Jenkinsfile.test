@@ -25,7 +25,7 @@ pipeline {
         stage('parallel stage') {
             steps {
                 script {
-                    parallel parallelStagesMap
+                    parallelStagesMap
                 }
             }
         }
