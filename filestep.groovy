@@ -6,7 +6,7 @@ def generateStage(nodeLabel) {
     return {
         stage("Runs on ${nodeLabel}") { 
             node(nodeLabel) {
-                echo "Running on ${nodeLabel}"
+                echo "Running on node: ${nodeLabel}"
             }
         }
     }
