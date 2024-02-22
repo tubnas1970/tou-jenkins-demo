@@ -26,7 +26,7 @@ pipeline {
       }
     }
 
-    stage('parallel stage') {
+    stage('Last Stage') {
       steps {
         script {
           grvy.generateStage("mynode")
