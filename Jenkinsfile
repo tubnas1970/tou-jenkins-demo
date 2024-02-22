@@ -29,7 +29,7 @@ pipeline {
     stage('Last Stage') {
       steps {
         script {
-          grvy.generateStage("mynode")
+          parallel grvy.generateStage("mynode")
         }
       }
     }    
