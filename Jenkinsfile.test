@@ -33,7 +33,7 @@ pipeline {
         stage('parallel stage') {
             steps {
                 script {
-                    parallel generateStage2
+                    parallel generateStage2("My Stage")
                 }
             }
         }
