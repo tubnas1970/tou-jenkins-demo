@@ -12,6 +12,14 @@ def generateStage(job) {
     }
 }
 
+def generateStage2(stageName) {
+    return {
+        stage("stage: ${stageName}") {
+                echo "This is ${stageName}."
+        }
+    }
+}
+
 pipeline {
     agent any
     
@@ -25,7 +33,7 @@ pipeline {
         stage('parallel stage') {
             steps {
                 script {
-                    parallelStagesMap
+                    parallel generateStage2
                 }
             }
         }
